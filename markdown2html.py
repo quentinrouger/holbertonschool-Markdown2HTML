@@ -1,8 +1,8 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 Markdown to HTML Converter
 
-Task 0: start a script
+Task 0: start a script.
 """
 
 import sys

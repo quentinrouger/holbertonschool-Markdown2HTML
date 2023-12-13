@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Markdown to HTML conversion script.
-Usage: ./markdown2html.py <input_file> <output_file>
+Markdown to HTML Converter
+Task 0: start a script
 """
 
 import sys

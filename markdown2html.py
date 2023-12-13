@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """
 Markdown to HTML conversion script.
 
@@ -20,6 +20,33 @@ def convert_markdown_to_html(input_file, output_file):
     except FileNotFoundError:
         print(f"Missing {input_file}", file=sys.stderr)
         sys.exit(1)
+
+
+def parse_headings(md_content):
+    """
+    Parse Markdown headings and generate corresponding HTML.
+
+    Args:
+    - md_content (str): Markdown content.
+
+    Returns:
+    - str: HTML content.
+    """
+    lines = md_content.split('\n')
+    html_lines = []
+
+    for line in lines:
+        if line.startswith('#'):
+            # Extract heading level and text
+            heading_level = line.count('#')
+            heading_text = line.lstrip('#').strip()
+            # Generate HTML for the heading
+            html_line = f"<h{heading_level}>{heading_text}</h{heading_level}>"
+            html_lines.append(html_line)
+        else:
+            html_lines.append(line)
+
+    return '\n'.join(html_lines)
 
 
 if __name__ == "__main__":

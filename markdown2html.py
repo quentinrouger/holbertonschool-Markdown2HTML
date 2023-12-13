@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
-Markdown to HTML Converter
+Markdown to HTML conversion script.
 
-Task 0: start a script.
+Usage: ./markdown2html.py <input_file> <output_file>
 """
 
 import sys
@@ -10,13 +10,7 @@ import markdown
 
 
 def convert_markdown_to_html(input_file, output_file):
-    """
-    Convert Markdown content to HTML.
-
-    Parameters:
-    - input_file (str): Path to the input Markdown file.
-    - output_file (str): Path to the output HTML file.
-    """
+    """function that converts a Markdown file to an HTML file."""
     try:
         with open(input_file, 'r') as md_file:
             md_content = md_file.read()

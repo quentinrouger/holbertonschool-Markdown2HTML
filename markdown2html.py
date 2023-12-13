@@ -1,10 +1,6 @@
 #!/usr/bin/env python3
 """
 Markdown to HTML conversion script.
-
-This script takes a Markdown file as input, converts it to HTML using the
-Markdown library, and writes the HTML content to an output file.
-
 Usage: ./markdown2html.py <input_file> <output_file>
 """
 

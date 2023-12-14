@@ -1,6 +1,6 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
-Markdown to HTML conversion script
+Markdown to HTML Converter
 Task 1: convert heading
 """
 

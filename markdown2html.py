@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
-Markdown to HTML conversion script.
-
+Markdown to HTML conversion script
 Usage: ./markdown2html.py <input_file> <output_file>
 """
 
@@ -23,15 +22,7 @@ def convert_markdown_to_html(input_file, output_file):
 
 
 def parse_headings(md_content):
-    """
-    Parse Markdown headings and generate corresponding HTML.
-
-    Args:
-    - md_content (str): Markdown content.
-
-    Returns:
-    - str: HTML content.
-    """
+    """Parse Markdown headings and generate corresponding HTML."""
     lines = md_content.split('\n')
     html_lines = []
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Markdown to HTML conversion script
-Usage: ./markdown2html.py <input_file> <output_file>
+Task 1: convert heading
 """
 
 import sys

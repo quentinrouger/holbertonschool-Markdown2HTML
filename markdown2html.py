@@ -9,7 +9,7 @@ import markdown
 
 
 def convert_markdown_to_html(input_file, output_file):
-    """function that converts a Markdown file to an HTML file."""
+    """function that converts a Markdown file to an HTML file"""
     try:
         with open(input_file, 'r') as md_file:
             md_content = md_file.read()
@@ -22,16 +22,14 @@ def convert_markdown_to_html(input_file, output_file):
 
 
 def parse_headings(md_content):
-    """Parse Markdown headings and generate corresponding HTML."""
+    """Parse Markdown headings and generate corresponding HTML"""
     lines = md_content.split('\n')
     html_lines = []
 
     for line in lines:
         if line.startswith('#'):
-            # Extract heading level and text
             heading_level = line.count('#')
             heading_text = line.lstrip('#').strip()
-            # Generate HTML for the heading
             html_line = f"<h{heading_level}>{heading_text}</h{heading_level}>"
             html_lines.append(html_line)
         else:
@@ -41,7 +39,6 @@ def parse_headings(md_content):
 
 
 if __name__ == "__main__":
-    # Check if the correct number of arguments is provided
     if len(sys.argv) != 3:
         print("Usage: ./markdown2html.py README.md README.html",
               file=sys.stderr)
